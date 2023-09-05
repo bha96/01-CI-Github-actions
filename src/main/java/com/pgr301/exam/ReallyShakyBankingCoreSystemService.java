@@ -41,7 +41,7 @@ class ReallyShakyBankingCoreSystemService implements BankingCoreSystmeService {
         //randomizeExceptionOrPanic(0.9f);
         Account account = getOrCreateAccount(a.getId());
         account.setBalance(a.getBalance());
-        account.seCurrency(a.getCurrency());
+        account.setCurrency(a.getCurrency());
         theBank.put(a.getId(), a);
         return account;
     }
