@@ -50,6 +50,7 @@ class ReallyShakyBankingCoreSystemService implements BankingCoreSystmeService {
     public BigDecimal balance(@PathVariable String accountId) {
         randomizedWait(10000);
         //randomizeExceptionOrPanic(0.2f);
+        System.out.println("Hello from balance");
         Account account = ofNullable(theBank.get(accountId)).orElseThrow(BankAccountController.AccountNotFoundException::new);
         return account.getBalance();
     }
